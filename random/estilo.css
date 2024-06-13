@@ -1,0 +1,368 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    transition: all ease-in 0.1s;
+    color: #494949;
+    text-decoration: none;
+}
+
+
+body{
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+}
+
+.grape-box{
+    height: 5px;
+}
+
+.grape{
+    margin-top: -8px;
+    margin-right: -15px;
+    width: 65px;
+    cursor: pointer;
+}
+
+.filter{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.726);
+    transition: opacity 0.2s;
+    opacity: 0; 
+    z-index: -10;
+    
+}
+    
+.filter.active{
+    opacity: 1;
+    z-index: 3;
+}
+
+.header{
+    width: 100%;
+    background-color: white;
+    position: relative;
+    z-index: 5;
+
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+}
+
+li{
+    font-size: 15px;
+    padding: 15px 20px;
+}
+
+nav {
+    position: relative;
+}
+
+.account-options{
+    width: 307px;
+    height: 260px;
+    position: absolute;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.226);
+    z-index: 4;
+    transition: all ease-in-out 0.4s;
+    position: absolute;
+    right: 140px;
+    top: -208px;
+}
+
+.account-options.active{
+    top: 47px;    
+}
+
+.account-options h1{
+    margin-left: 12px;
+    margin-top: 14px;
+    font-size: 25px;
+    }
+    
+.account-options p{
+    margin-left: 10px;
+    margin-bottom: 6px;
+}
+
+.account-options .options{
+    display: flex;
+    font-size: 15px;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.account-options .sign-in{
+    color: #06c;    
+    text-decoration: underline;
+}
+
+.before-options{
+    font-size: 15px;     
+    color: #494949;
+    padding-top: 18px;
+    padding-bottom: 6px;
+}
+
+.options{
+    font-size: 17px;
+    font-weight: 700;
+    padding-top: 3px;
+}
+
+li :hover{
+    font-size: 16px;
+}
+
+.suport{
+    padding-right: 0;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+
+.icons i{
+    padding-left: 35px;
+    color: black;
+}
+
+.icons i:hover{
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.account{
+    position: absolute;
+    right: -50px;
+    bottom: -90px;
+    padding-bottom: 10px;
+}
+
+.login-container{
+    width: 480px;
+    height: 420px;
+    position: relative;
+}
+
+.login-container h1{
+    font-weight: 600;
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 58vh;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.email-input{
+    font-size: 17px;
+    width: 100%;
+    height: 55px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border: 1px solid #676767;
+    padding-left: 15px;
+    position: relative;
+    z-index: 1;
+    transition: all ease-in-out 1s;
+    outline-color: rgb(37, 132, 227) ;
+
+}
+
+.email-input.active{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.icon-div{
+    position: absolute;
+    font-size: 25px;
+    right: 15px;
+    top: 85px;
+    color: gray;
+    cursor: pointer;
+    z-index: 2;
+    transition: all ease-in-out 1.5s;
+}
+
+.icon-div.active{
+    top: 140px;
+}
+
+.icon-div:hover{
+    color: rgba(0, 0, 0, 0.851);
+}
+
+.icon-div:active{
+    color: black;
+}
+
+.email-input2{
+    transition: all ease-in-out 1ms;
+    font-size: 17px;
+    width: 100%;
+    height: 55px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border: none;
+    border-top:none;
+    padding-left: 15px;
+    transform: translateY(-200px);
+    transition: all ease-in-out 1s;
+    outline-color: rgb(37, 132, 227) ;    
+}
+
+.email-input2.active{
+   transform: translateY(0);
+   border-bottom-left-radius: 12px;
+   border-bottom-right-radius: 12px;
+   border: 2px solid;
+   border-top:none;
+   border: 1px solid #676767;
+   outline-color: rgb(37, 132, 227);
+}
+
+.input-div{
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+::placeholder{
+    padding-top: 120%;
+    font-size: 17px;
+}
+
+.remember-input{
+    margin-top: 95px;
+    text-align: center;
+    font-size: 19px;
+    margin-bottom: 26px;
+}
+
+.remember-input input{
+    margin-right: 5px;
+    accent-color: rgb(37, 132, 227);
+}
+.remember-input input:hover{
+    cursor: pointer;
+}
+
+.login-container a{
+    font-size: 15px;
+    color: #06c;
+}
+
+.login-container a:hover{
+    text-decoration: underline;
+}
+
+.login-container ul{
+    justify-content: center;
+    align-items: center;
+}
+
+.create-id{
+    margin-top: 15px;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-id a{
+    margin-left: 3px;
+}
+
+footer{
+    width: 1005.6px;
+    margin: auto;
+    margin-top: 26px;
+    color: #494949;
+}
+
+footer .need{
+    font-size: 17px;
+    margin-bottom: 60px;
+}
+
+footer .need a{
+    color: #06c;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.container{
+    width: 101%;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.272);
+}
+
+.container p a{
+    text-decoration: underline;
+}
+footer .container p{
+    font-size: 15px;
+    color: rgba(0,0,0,.56);
+}
+
+footer .outro a{
+    color: #06c;
+    text-decoration: underline;
+}   
+.outro{
+    font-size: 14px;
+    color: rgba(0,0,0,.56);
+    padding-top: 20px;
+}
+
+.outro2{
+    font-size: 14px;
+    color: rgba(0,0,0,.56);
+    padding-top: 10px;
+    width: 1015.64;
+    position: relative;
+}
+
+.outro2 .privacy{
+    padding-left: 26px;
+    border-right: 1px solid rgba(0,0,0,.56);
+    padding-right: 10px;
+}
+
+.outro2 a{
+    padding-left: 5px;
+    border-right: 1px solid rgba(0,0,0,.56);
+    padding-right: 10px;
+}
+
+.outro2 .united{
+    position: absolute;
+    right: 0px;
+    border: none;
+}
+
